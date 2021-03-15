@@ -1,0 +1,13 @@
+[Unit]
+Description=Bee Clef 1
+Documentation=https://docs.ethswarm.org
+After=network.target
+
+[Service]
+ExecStart=/root/bees/bee1/clef/bee-clef-service start
+ExecStop=/root/bees/bee1/clef/bee-clef-service stop
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

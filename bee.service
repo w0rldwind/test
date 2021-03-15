@@ -1,0 +1,13 @@
+[Unit]
+Description=Bee1 - Ethereum Swarm node
+Documentation=https://docs.ethswarm.org
+After=network.target
+
+[Service]
+User=root
+ExecStart=/root/bees/bee1/bee/bee start --config /root/bees/bee1/bee/cfg/bee.yaml
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
