@@ -71,3 +71,11 @@ sed -i 's/ExecStart=\x2Froot\x2Fbees\x2Fbee1\x2Fbee\x2Fbee start --config \x2Fro
 sed -i 's/ExecStart=\x2Froot\x2Fbees\x2Fbee1\x2Fclef\x2Fbee-clef-service start/ExecStart=\x2Froot\x2Fbees\x2Fbee'$n'\x2Fclef\x2Fbee-clef-service start/' /etc/systemd/system/bee-clef$n.service
 
 sed -i 's/ExecStop=\x2Froot\x2Fbees\x2Fbee1\x2Fclef\x2Fbee-clef-service stop/ExecStop=\x2Froot\x2Fbees\x2Fbee'$n'\x2Fclef\x2Fbee-clef-service stop/' /etc/systemd/system/bee-clef$n.service
+
+./clef.sh init $n
+
+systemctl daemon-reload
+systemctl start bee-clef$n
+sleep 10
+systemctl start bee$n
+journalctl --lines=100 --follow --unit bee$n
