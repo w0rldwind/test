@@ -15,3 +15,9 @@ chmod +x ~/bees/bee-clef-service
 chmod +x ~/bees/bee.service
 chmod +x ~/bees/bee-clef.service
 chmod +x ~/bees/cashout.sh
+
+echo "Введи пароль конфигурации Bee"
+read pass
+
+password: "пароль"
+sed -i 'password: "пароль"/password: "'$pass'"/' ~/bees/bee.yaml
