@@ -20,3 +20,8 @@ echo "Введи пароль конфигурации Bee"
 read pass
 
 sed -i 's/password: "пароль"/password: "'$pass'"/' ~/bees/bee.yaml
+
+rm run.sh
+
+cd bees
+./upd.sh
