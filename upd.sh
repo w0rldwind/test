@@ -43,7 +43,7 @@ sed -i 's/ExecStop=\x2Froot\x2Fbees\x2Fbee1\x2Fclef\x2Fbee-clef-service stop/Exe
 
 sed -i 's/DEBUG_API=http:\x2F\x2Flocalhost:1635/DEBUG_API=http:\x2F\x2Flocalhost:'$port'635/' ~/cashout$n.sh
 
-echo "0 */6 * * * /bin/bash /root/cashout$n.sh cashout-all >> /root/cash$n.log 2>&1		<--- Скопируй для добавления в планировщик (crontab -e). Продолжение установки через 10 сек..."
+echo "0 */6 * * * /bin/bash /root/cashout'$n'.sh cashout-all >> /root/cash$n.log 2>&1		<--- Скопируй для добавления в планировщик (crontab -e). Продолжение установки через 10 сек..."
 
 sleep 10
 
