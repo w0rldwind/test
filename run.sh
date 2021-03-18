@@ -19,4 +19,4 @@ chmod +x ~/bees/cashout.sh
 echo "Введи пароль конфигурации Bee"
 read pass
 
-sed -i 'password: "пароль"/password: "'$pass'"/' ~/bees/bee.yaml
+sed -i 's/password: "пароль"/password: "'$pass'"/' ~/bees/bee.yaml
