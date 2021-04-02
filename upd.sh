@@ -12,7 +12,7 @@ mkdir ~/bees/bee$n/clef
 mkdir ~/bees/bee$n/clef/cfg
 mkdir ~/bees/bee$n/clef/data
 
-wget -O ~/bees/bee$n/bee/bee https://github.com/ethersphere/bee/releases/download/v0.5.2/bee-linux-amd64
+wget -O ~/bees/bee$n/bee/bee https://github.com/ethersphere/bee/releases/download/v0.5.3/bee-linux-amd64
 chmod +x ~/bees/bee$n/bee/bee
 wget -O ~/bees/bee$n/clef/bee-clef https://github.com/ethersphere/bee-clef/releases/download/v0.4.9/bee-clef-linux-amd64
 chmod +x ~/bees/bee$n/clef/bee-clef
